@@ -4,26 +4,25 @@ Main();
 
 void Main()
 {
+    // new line with \n
+    Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!\n--------------------------------------------\n");
 
-    Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
-    Console.WriteLine("--------------------------------------------");
-    Console.WriteLine();
-
-    //Let the moose speak
+    //Let the moose speak - twice
     MooseSays("HI, I'M ENTHUSIASTIC!");
     MooseSays("I really am enthusiastic");
 
     //Ask the moose a question
-    CanadaQuestion();
-    EnthusiasticQuestion();
-    LoveCSharpQuestion();
-    SecretQuestion();
+    // 4 separate functions replaced with QuestionWithParameters
+    // CanadaQuestion();
+    // EnthusiasticQuestion();
+    // LoveCSharpQuestion();
+    // SecretQuestion();
+    QuestionWithParameters("Is Canada real?", "Really? It seems very unlikely.", "I  K N E W  I T !!!");
+    QuestionWithParameters("Are you enthusiastic?", "Yay!", "You should try it!");
+    QuestionWithParameters("Do you love C# yet?", "Good job sucking up to your instructor!", "You will...oh, yes, you will...");
+    QuestionWithParameters("Do you want to know a secret?", "ME TOO!!!! I love secrets...tell me one!", "Oh, no...secrets are the best, I love to share them!");
 
-    // refactor the questions code
-    // MooseAsks("Is Canada real?");
-    // MooseAsks("Are you enthusiastic?");
-    // MooseAsks("Do you love C# yet?");
-    // MooseAsks("Do you want to know a secret?");
+
 }
 
 
@@ -88,54 +87,70 @@ bool MooseAsks(string question)
     }
 };
 
-void CanadaQuestion()
+// each parameter is going to be a string
+void QuestionWithParameters(string questionAsked, string yesResponse, string noResponse)
 {
-    bool isTrue = MooseAsks("Is Canada real?");
+    bool isTrue = MooseAsks(questionAsked);
     if (isTrue)
     {
-        MooseSays("Really? It seems very unlikely.");
+        MooseSays(yesResponse);
     }
     else
     {
-        MooseSays("I  K N E W  I T !!!");
+        MooseSays(noResponse);
     }
-}
 
-void EnthusiasticQuestion()
-{
-    bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
-    if (isEnthusiastic)
-    {
-        MooseSays("Yay!");
-    }
-    else
-    {
-        MooseSays("You should try it!");
-    }
-}
+};
 
-void LoveCSharpQuestion()
-{
-    bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
-    if (doesLoveCSharp)
-    {
-        MooseSays("Good job sucking up to your instructor!");
-    }
-    else
-    {
-        MooseSays("You will...oh, yes, you will...");
-    }
-}
+// Replaced with QuestionWithParameters
+// void CanadaQuestion()
+// {
+//     bool isTrue = MooseAsks("Is Canada real?");
+//     if (isTrue)
+//     {
+//         MooseSays("Really? It seems very unlikely.");
+//     }
+//     else
+//     {
+//         MooseSays("I  K N E W  I T !!!");
+//     }
+// }
 
-void SecretQuestion()
-{
-    bool wantsSecret = MooseAsks("Do you want to know a secret?");
-    if (wantsSecret)
-    {
-        MooseSays("ME TOO!!!! I love secrets...tell me one!");
-    }
-    else
-    {
-        MooseSays("Oh, no...secrets are the best, I love to share them!");
-    }
-}
+// void EnthusiasticQuestion()
+// {
+//     bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
+//     if (isEnthusiastic)
+//     {
+//         MooseSays("Yay!");
+//     }
+//     else
+//     {
+//         MooseSays("You should try it!");
+//     }
+// }
+
+// void LoveCSharpQuestion()
+// {
+//     bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
+//     if (doesLoveCSharp)
+//     {
+//         MooseSays("Good job sucking up to your instructor!");
+//     }
+//     else
+//     {
+//         MooseSays("You will...oh, yes, you will...");
+//     }
+// }
+
+// void SecretQuestion()
+// {
+//     bool wantsSecret = MooseAsks("Do you want to know a secret?");
+//     if (wantsSecret)
+//     {
+//         MooseSays("ME TOO!!!! I love secrets...tell me one!");
+//     }
+//     else
+//     {
+//         MooseSays("Oh, no...secrets are the best, I love to share them!");
+//     }
+// }
