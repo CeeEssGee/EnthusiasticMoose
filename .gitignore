@@ -9,7 +9,7 @@
 *.user
 *.userosscache
 *.sln.docstates
-ZCourtney.cs
+ZCourtney.md
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
